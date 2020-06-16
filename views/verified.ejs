@@ -18,7 +18,9 @@
     <div id="box">
 
       <ul>
-        <% for(var d in data) { %> 
+        <% for(var d in data) { %>
+        <% if (data[d] === '') { %>
+        <% continue; } %>   
         <li>
           <p><%= d %> : <%= data[d] %></p>
         </li>
