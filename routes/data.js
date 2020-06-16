@@ -64,33 +64,6 @@ router.post('/add-files',upload.single('file'),logincheck(),function(req,res,nex
 
     var json_data = papaparse.parse(content, {header: true}).data;
 
-    // var rows=content.split('\r\n');
-
-    // var json_data=[];
-    // for(var i=1;i<rows.length;i++){
-    //     var values=rows[i].split(',');
-    //     for (let j = 0; j < values.length; j++) {
-    //         const element = array[j];
-            
-    //     }
-    //     json_data.push({
-    //         'date of issue':values[0],
-    //         'branch':values[1],
-    //         'category':values[2],
-    //         'sem':values[3],
-    //         'title':values[4],
-    //         'usn1':values[5],
-    //         'name1':values[6],
-    //         'usn2':values[7],
-    //         'name2':values[8],
-    //         'usn3':values[9],
-    //         'name3':values[10],
-    //         'usn4':values[11],
-    //         'name4':values[12],
-    //     }); 
-    // } 
-    
-
     var certData=json_data;
     var result=new Array();
     if(typeof(certData)==='string')
