@@ -48,7 +48,7 @@ def add_data(path):
         # print(logout_response.text)
         # datagram['serial']=l
         datagram.rename(columns={'verifyUrl': 'serial'}, inplace=True)
-        datagram.to_csv(path)
+        datagram.to_csv(path, index=False)
     except:
         print("Unexpected error:", sys.exc_info()[0])
         print("error")
